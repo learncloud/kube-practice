@@ -17,4 +17,6 @@ spec:
     # (4) .spec.containers[].image: 컨테이너에서 사용하는 이미지 
     # (5) .spec.containers[].ports[].containerPort: 해당 컨테이너에 접속할 포트  
 
+    # 코멘트 한글로 수정
+
     
