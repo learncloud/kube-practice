@@ -14,7 +14,7 @@ spec:
     # (1) .metadata.name: 파드 이름
     # (2) .metadata.labes.app: 오브젝트를 식별하는 레이블 파드가 앱컨테이너이고, 이름은 kubernetes-simple-pod라는 것을 설명
     # (3) .spec.containers[].name: 컨테이너 이름
-    # (4) .spec.containers[].image: 컨테이너에서 사용하는 이미지
-    # (5) .spec.containers[].ports[].containerPort: 해당 컨테이너에 접속할 포트 
+    # (4) .spec.containers[].image: 컨테이너에서 사용하는 이미지 
+    # (5) .spec.containers[].ports[].containerPort: 해당 컨테이너에 접속할 포트  
 
     
