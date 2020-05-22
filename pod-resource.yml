@@ -17,3 +17,5 @@ spec:
         memory: 1G
     ports:
     - containerPort: 8080
+
+    #
