@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-resource
+  labels:
+    app: pod-resource
+spec:
+  containers:
+  - name: pod-resource
+    image: arisu1000/simple-container-app:latest
+    resources:  # 자원 사용량을 설정하는 부분
+      requests:
+        cpu: 0.1
+        memory: 200M
+      limits:
+        cpu: 0.5
+        memory: 1G
+    ports:
+    - containerPort: 8080
