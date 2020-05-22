@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echoserver-pods
+  labels:
+    app: echoserver-pods 
+spec:
+  containers:
+  - name: echoserver
+    image: arisu1000/simple-container-app:latest
+    ports:
+    - containerPort: 8080  
+
+    
