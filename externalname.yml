@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  namespace: prod
+spec:
+  type: ExternalName 
+  externalName: google.com # (1) 
+  
+  # (1) 연결하려는 외부 도메인 값을 설정한것이다.
