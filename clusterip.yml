@@ -4,7 +4,8 @@ metadata:
   name: clusterip-service
 spec:
   type: ClusterIP # (1)
-	selector:
+  # clusterIP: 10.0.10.10
+  selector:
     app: nginx-for-svc # (2)
   ports:
   - protocol: TCP
