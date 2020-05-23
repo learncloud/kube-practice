@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pi
+spec:
+  template:
+    spec:
+      containers:
+      - name: pi
+        image: perl
+        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"] # (1)
+      restartPolicy: Never # (2)
+  backoffLimit: 4 # (3)
+
+  # (1) 원주율 계산하는 펄 명령 내용을 설정한다.
+  # (2) 필드값을 Never로 설정해 파드가 항상 끝나도록 한다.
+  # (3) 몇번 재시작할건지 설정하는 필드이다.
