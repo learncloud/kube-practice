@@ -19,3 +19,5 @@ spec:
       containers:
       - name: php-redis
         image: gcr.io/google_samples/gb-frontend:v3o
+
+        #
