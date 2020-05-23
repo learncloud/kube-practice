@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: clusterip-service
+spec:
+  type: ClusterIP # (1)
+	selector:
+    app: nginx-for-svc # (2)
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+
+# (1) type값을 클러스터ip로 설정했다.
+# (2) 앞에서 실행한 nginx-for-service 파드를 선택하도록 했다.
