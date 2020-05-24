@@ -5,8 +5,8 @@ metadata:
 spec:
   tls:
   - hosts:
-    - kube-test.com
-    secretName: kube-test-secret
+    - kube-test.com # (1)
+    secretName: kube-test-secret # (2)
   rules:
   - host: kube-test.com
     http:
@@ -15,3 +15,7 @@ spec:
       - backend:
           serviceName: service1
           servicePort: 80
+          
+
+    # (1) 호스트 이름을 kube-test.com으로 설정했다.
+    # (2) 앞서 만든 secretName인 kube-test.com을 설정했다.
