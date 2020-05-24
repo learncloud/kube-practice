@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-ssl
+spec:
+  tls:
+  - hosts:
+    - kube-test.com
+    secretName: kube-test-secret
+  rules:
+  - host: kube-test.com
+    http:
+      paths:
+      - paths: /
+      - backend:
+          serviceName: service1
+          servicePort: 80
