@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: configapp
+  labels:
+    app: configapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: configapp
+  template:
+    metadata:
+      labels:
+        app: configapp
+    spec:
+      containers:
+      - name: testapp
+        image: arisu1000/simple-container-app:latest
+        ports:
+        - containerPort: 8080
+        envFrom: # (1)
+        - configMapRef: # (2-1)
+            name: config-dev # (2-2)
+
+# (1) 환경변수를 어디서 가져올지 선언하는곳이다.
+# (2-1,2-2) 어떤 컨피그맵을 참ㅈ해 환경 변수를 불러올 것인지 설정한다. 컨피그맵인 config-dev를 연결했다.
+
