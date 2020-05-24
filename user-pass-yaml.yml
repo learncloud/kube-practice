@@ -11,4 +11,4 @@ data:
 #       Opaque이란? 키-값 형식으로 임의의 데이터를 설정한다.
 #       kubernetes.io/service-account-token : 쿠버네티스 인증 ㅌ큰을 저장
 #       kubernetes.io/dockerconfigjson : 도커 저장소 인증 정보를 저장
-#       kubernetes.io/tls : TLS 인증서를 저장
+#       kubernetes.io/tls : TLS 인증서를 저장 
