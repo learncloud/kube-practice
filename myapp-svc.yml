@@ -14,5 +14,3 @@ spec:
   selector:
     app: myapp
   type: NodePort
-
-

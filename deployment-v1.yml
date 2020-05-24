@@ -22,3 +22,4 @@ spec:
         image: arisu1000/simple-container-app:v0.1
         ports:
         - containerPort: 8080
+        #
