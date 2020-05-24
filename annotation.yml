@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: annotation
+  labels:
+    app: nginx
+  annotations:
+    manager: "admin"  # (1)
+    contact: "010-4321-1234" # (2)
+    release-version: "v1.0" # (3)
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
+        # (1) 키에 담당자 정보를 담으려고 admin이라는 값을 설정함
+        # (2) 연락처 정보를 넣음
+        # (3) release-version라는 키와 "v1.0" 라는 값을 설정함
